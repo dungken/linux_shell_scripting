@@ -1,0 +1,15 @@
+# Here is files in bash_shell_scripting folder
+Bitcoinprice.txt
+demo.txt
+error.txt
+files_new.txt
+files.txt
+folder_text
+greetnew.sh
+greet.sh
+Note.md
+pets_example.txt
+pets.txt
+practice
+space.txt
+test.txt

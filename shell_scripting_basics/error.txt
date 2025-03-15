@@ -1,0 +1,2 @@
+ls: cannot access 'non-exstent-directory': No such file or directory
+ls: cannot access 'non-existent-directory': No such file or directory

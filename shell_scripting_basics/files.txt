@@ -1,0 +1,21 @@
+Bitcoinprice.txt
+files.txt
+file with
+file with space.txt
+greetnew.sh
+greet.sh
+Note.md
+pets_example.txt
+pets.txt
+space.txt
+test.txt
+Bitcoinprice.txt
+demo.txt
+files.txt
+greetnew.sh
+greet.sh
+Note.md
+pets_example.txt
+pets.txt
+space.txt
+test.txt

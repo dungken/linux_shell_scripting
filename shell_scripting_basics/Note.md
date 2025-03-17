@@ -214,6 +214,112 @@ Used to pass arguments to a shell script:
 <br/>
 <br/>
 
+# **Advanced Bash Scripting**  
+
+## **Conditionals**  
+```bash
+  if [ condition ]
+  then
+      statement_block_1  
+  else
+      statement_block_2  
+  fi
+```
+
+```bash
+  ## && operator
+  if [ condition1 ] && [ condition2 ]
+  then
+      echo "conditions 1 and 2 are both true"
+  else
+      echo "one or both conditions are false"
+  fi
+
+  ## || operator
+  if [ condition1 ] || [ condition2 ]
+  then
+      echo "conditions 1 or 2 are true"
+  else
+      echo "both conditions are false"
+  fi
+```
+## **Logical operators**
+https://tldp.org/LDP/abs/html/comparison-ops.html
+
+## **Arithmetic calculations $(())**
+```bash
+## 
+  echo $((3+2))
+
+##
+  a=3
+  b=2
+  c=$(($a+$b))
+  echo $c
+```
+
+## **Arrays**
+The array is a Bash built-in data structure. An array is a space-delimited list contained in parentheses
+```bash
+# built-in 
+my_array=(1 2 "three" "four" 5)
+
+# empty array
+declare -a empty_array
+# add items to your array after creating it
+my_array+=("six")
+my_array+=(7)
+
+# access individual or multiple elements
+# print the first item of the array:
+echo ${my_array[0]}
+# print the third item of the array:
+echo ${my_array[2]}
+# print all array elements:
+echo ${my_array[@]}
+
+```
+
+## **for loops**
+
+```bash
+for item in ${my_array[@]}; do
+  echo $item
+done
+
+#or
+for i in ${!my_array[@]}; do
+  echo ${my_array[$i]}
+done
+
+#or
+N=6
+for (( i=0; i<=$N; i++ )) ; do
+  echo $i
+done
+
+#for loops to accomplish all sorts of things
+#!/usr/bin/env bash
+# initialize array, count, and sum
+my_array=(1 2 3)
+count=0
+sum=0
+for i in ${!my_array[@]}; do
+  # print the ith array element
+  echo ${my_array[$i]}
+  # increment the count by one
+  count=$(($count+1))
+  # add the current value of the array to the sum
+  sum=$(($sum+${my_array[$i]}))
+done
+echo $count
+echo $sum
+
+```
+
+<br/>
+<br/>
+
 # **Scheduling Jobs Using Cron**  
 
 ## **What is Cron?**  
